@@ -42,6 +42,8 @@ class WelcomeViewController: UIViewController {
 
     @objc func buttonTapped(_ sender: UIButton) {
         let repoListVC = RepoListViewController()
+        repoListVC.viewModel = RepoListViewModel(listGateway: DefaultListGateway())
+        repoListVC.username = sender.title(for: .normal)
         navigationController?.pushViewController(repoListVC, animated: true)
     }
 }

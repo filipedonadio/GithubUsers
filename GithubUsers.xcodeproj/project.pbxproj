@@ -14,6 +14,8 @@
 		8175AF3C23D5926D001D3950 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175AF3B23D5926D001D3950 /* WelcomeViewController.swift */; };
 		8175AF3E23D594CB001D3950 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175AF3D23D594CB001D3950 /* Colors.swift */; };
 		8175AF4023D59527001D3950 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175AF3F23D59527001D3950 /* CustomButton.swift */; };
+		81791E7A23D5CF2900F00D19 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81791E7923D5CF2900F00D19 /* RepoListViewModel.swift */; };
+		81791E7C23D5EA5000F00D19 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81791E7B23D5EA5000F00D19 /* AlertDisplayer.swift */; };
 		8195F69423D5B039001D5AA1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69323D5B039001D5AA1 /* WelcomeView.swift */; };
 		8195F69623D5B78B001D5AA1 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69523D5B78B001D5AA1 /* RepoListViewController.swift */; };
 		8195F69923D5BFCD001D5AA1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69823D5BFCD001D5AA1 /* NetworkError.swift */; };
@@ -39,6 +41,8 @@
 		8175AF3B23D5926D001D3950 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8175AF3D23D594CB001D3950 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8175AF3F23D59527001D3950 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		81791E7923D5CF2900F00D19 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		81791E7B23D5EA5000F00D19 /* AlertDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayer.swift; sourceTree = "<group>"; };
 		8195F69323D5B039001D5AA1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8195F69523D5B78B001D5AA1 /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		8195F69823D5BFCD001D5AA1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -84,17 +88,26 @@
 		8175AF2623D591F6001D3950 /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
-				8195F69E23D5C02C001D5AA1 /* Model */,
 				8175AF2723D591F6001D3950 /* AppDelegate.swift */,
 				8175AF2923D591F6001D3950 /* SceneDelegate.swift */,
-				8175AF3D23D594CB001D3950 /* Colors.swift */,
+				8195F69E23D5C02C001D5AA1 /* Model */,
 				8195F6B223D5CC9D001D5AA1 /* Screens */,
 				8195F69723D5BF9C001D5AA1 /* Networking */,
+				81791E7D23D5EB2C00F00D19 /* Utils */,
 				8175AF3023D591F7001D3950 /* Assets.xcassets */,
 				8175AF3223D591F7001D3950 /* LaunchScreen.storyboard */,
 				8175AF3523D591F7001D3950 /* Info.plist */,
 			);
 			path = GithubUsers;
+			sourceTree = "<group>";
+		};
+		81791E7D23D5EB2C00F00D19 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8175AF3D23D594CB001D3950 /* Colors.swift */,
+				81791E7B23D5EA5000F00D19 /* AlertDisplayer.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8195F69723D5BF9C001D5AA1 /* Networking */ = {
@@ -152,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				8195F6A923D5C904001D5AA1 /* Services */,
+				81791E7923D5CF2900F00D19 /* RepoListViewModel.swift */,
 				8195F69523D5B78B001D5AA1 /* RepoListViewController.swift */,
 			);
 			path = "Repo List";
@@ -235,6 +249,7 @@
 				8195F69423D5B039001D5AA1 /* WelcomeView.swift in Sources */,
 				8175AF3E23D594CB001D3950 /* Colors.swift in Sources */,
 				8175AF2823D591F6001D3950 /* AppDelegate.swift in Sources */,
+				81791E7C23D5EA5000F00D19 /* AlertDisplayer.swift in Sources */,
 				8195F6A023D5C050001D5AA1 /* Repository.swift in Sources */,
 				8195F69D23D5C01E001D5AA1 /* RequestManager.swift in Sources */,
 				8195F6AF23D5C9D3001D5AA1 /* ListResponse.swift in Sources */,
@@ -243,6 +258,7 @@
 				8175AF2A23D591F6001D3950 /* SceneDelegate.swift in Sources */,
 				8195F69623D5B78B001D5AA1 /* RepoListViewController.swift in Sources */,
 				8195F6A823D5C558001D5AA1 /* NetworkConfiguration.swift in Sources */,
+				81791E7A23D5CF2900F00D19 /* RepoListViewModel.swift in Sources */,
 				8195F69B23D5BFF3001D5AA1 /* NetworkRequest.swift in Sources */,
 				8175AF4023D59527001D3950 /* CustomButton.swift in Sources */,
 			);
