@@ -16,6 +16,16 @@ class WelcomeViewController: UIViewController {
         view = welcomeView
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +41,7 @@ class WelcomeViewController: UIViewController {
     }
 
     @objc func buttonTapped(_ sender: UIButton) {
-        
+        let repoListVC = RepoListViewController()
+        navigationController?.pushViewController(repoListVC, animated: true)
     }
 }
