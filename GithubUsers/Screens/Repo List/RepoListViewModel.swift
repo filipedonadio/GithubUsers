@@ -25,8 +25,8 @@ final class RepoListViewModel {
         self.listGateway = listGateway
     }
 
-    func fetchRepos(for username: String) {
-        listGateway.fetch(username: username) { [weak self] response in
+    func fetchRepos(for username: String, page: Int) {
+        listGateway.fetch(username: username, page: page) { [weak self] response in
 
             switch response {
 
@@ -37,8 +37,11 @@ final class RepoListViewModel {
 
             case .success(let repos):
                 DispatchQueue.main.async { [weak self] in
-                    self?.repositories = repos
-                    self?.delegate?.onFetchReposCompleted()
+                    if !repos.isEmpty {
+                        self?.repositories.append(contentsOf: repos)
+                        self?.delegate?.onFetchReposCompleted()
+                    }
+
                 }
             }
         }

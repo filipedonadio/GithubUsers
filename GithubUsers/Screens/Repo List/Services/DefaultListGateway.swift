@@ -16,8 +16,8 @@ class DefaultListGateway: ListGateway {
         self.requestManager = requestManager
     }
 
-    func fetch(username: String, completion: @escaping ListGateway.Completion) {
-        let request = ListRequest(username: username)
+    func fetch(username: String, page: Int, completion: @escaping ListGateway.Completion) {
+        let request = ListRequest(username: username, page: page)
 
         requestManager.execute(request: request) { response in
             completion(response)

@@ -11,5 +11,5 @@ import Foundation
 protocol ListGateway {
 
     typealias Completion = (ListResponse) -> Void
-    func fetch(username: String, completion: @escaping Completion)
+    func fetch(username: String, page: Int, completion: @escaping Completion)
 }

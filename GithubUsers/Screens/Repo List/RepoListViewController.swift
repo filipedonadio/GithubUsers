@@ -17,6 +17,7 @@ class RepoListViewController: UITableViewController, AlertDisplayer {
     }
 
     var username: String?
+    var page = 1
 
     let itemCellId = "itemCellId"
 
@@ -39,7 +40,7 @@ class RepoListViewController: UITableViewController, AlertDisplayer {
 
     private func fetchRepos() {
         if let username = username {
-            viewModel?.fetchRepos(for: username)
+            viewModel?.fetchRepos(for: username, page: page)
         }
     }
 
@@ -64,6 +65,19 @@ class RepoListViewController: UITableViewController, AlertDisplayer {
         }
 
         return UITableViewCell()
+    }
+
+    // MARK: - Table view delegate methods
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        guard let username = username else { return }
+
+        let lastItem = viewModel.repositories.count - 1
+
+        if indexPath.row == lastItem && tableView.contentOffset.y > 0 {
+            page += 1
+            viewModel.fetchRepos(for: username, page: page)
+        }
     }
 }
 

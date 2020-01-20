@@ -10,10 +10,11 @@ import Foundation
 
 class ListRequest: NetworkRequest {
 
-    init(username: String) {
+    init(username: String, page: Int) {
         var params = [URLQueryItem]()
 
-        params.append(URLQueryItem(name: "sort", value: "updated"))
+        params.append(URLQueryItem(name: "sort", value: "pushed"))
+        params.append(URLQueryItem(name: "page", value: "\(page)"))
 
         super.init(path: "users/\(username)/repos", parameters: params)
     }
