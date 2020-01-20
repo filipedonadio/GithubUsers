@@ -16,6 +16,17 @@
 		8175AF4023D59527001D3950 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175AF3F23D59527001D3950 /* CustomButton.swift */; };
 		8195F69423D5B039001D5AA1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69323D5B039001D5AA1 /* WelcomeView.swift */; };
 		8195F69623D5B78B001D5AA1 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69523D5B78B001D5AA1 /* RepoListViewController.swift */; };
+		8195F69923D5BFCD001D5AA1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69823D5BFCD001D5AA1 /* NetworkError.swift */; };
+		8195F69B23D5BFF3001D5AA1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69A23D5BFF3001D5AA1 /* NetworkRequest.swift */; };
+		8195F69D23D5C01E001D5AA1 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69C23D5C01E001D5AA1 /* RequestManager.swift */; };
+		8195F6A023D5C050001D5AA1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F69F23D5C050001D5AA1 /* Repository.swift */; };
+		8195F6A223D5C076001D5AA1 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F6A123D5C076001D5AA1 /* Owner.swift */; };
+		8195F6A423D5C13B001D5AA1 /* DefaultRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F6A323D5C13B001D5AA1 /* DefaultRequestManager.swift */; };
+		8195F6A823D5C558001D5AA1 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F6A723D5C558001D5AA1 /* NetworkConfiguration.swift */; };
+		8195F6AB23D5C9AE001D5AA1 /* DefaultListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F6AA23D5C9AE001D5AA1 /* DefaultListGateway.swift */; };
+		8195F6AD23D5C9CC001D5AA1 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F6AC23D5C9CC001D5AA1 /* ListRequest.swift */; };
+		8195F6AF23D5C9D3001D5AA1 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F6AE23D5C9D3001D5AA1 /* ListResponse.swift */; };
+		8195F6B123D5C9DC001D5AA1 /* ListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8195F6B023D5C9DC001D5AA1 /* ListGateway.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +41,17 @@
 		8175AF3F23D59527001D3950 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8195F69323D5B039001D5AA1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8195F69523D5B78B001D5AA1 /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
+		8195F69823D5BFCD001D5AA1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8195F69A23D5BFF3001D5AA1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		8195F69C23D5C01E001D5AA1 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		8195F69F23D5C050001D5AA1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		8195F6A123D5C076001D5AA1 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		8195F6A323D5C13B001D5AA1 /* DefaultRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequestManager.swift; sourceTree = "<group>"; };
+		8195F6A723D5C558001D5AA1 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		8195F6AA23D5C9AE001D5AA1 /* DefaultListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListGateway.swift; sourceTree = "<group>"; };
+		8195F6AC23D5C9CC001D5AA1 /* ListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
+		8195F6AE23D5C9D3001D5AA1 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
+		8195F6B023D5C9DC001D5AA1 /* ListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGateway.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +84,77 @@
 		8175AF2623D591F6001D3950 /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				8195F69E23D5C02C001D5AA1 /* Model */,
 				8175AF2723D591F6001D3950 /* AppDelegate.swift */,
 				8175AF2923D591F6001D3950 /* SceneDelegate.swift */,
 				8175AF3D23D594CB001D3950 /* Colors.swift */,
-				8175AF3F23D59527001D3950 /* CustomButton.swift */,
-				8195F69323D5B039001D5AA1 /* WelcomeView.swift */,
-				8175AF3B23D5926D001D3950 /* WelcomeViewController.swift */,
-				8195F69523D5B78B001D5AA1 /* RepoListViewController.swift */,
+				8195F6B223D5CC9D001D5AA1 /* Screens */,
+				8195F69723D5BF9C001D5AA1 /* Networking */,
 				8175AF3023D591F7001D3950 /* Assets.xcassets */,
 				8175AF3223D591F7001D3950 /* LaunchScreen.storyboard */,
 				8175AF3523D591F7001D3950 /* Info.plist */,
 			);
 			path = GithubUsers;
+			sourceTree = "<group>";
+		};
+		8195F69723D5BF9C001D5AA1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8195F6A723D5C558001D5AA1 /* NetworkConfiguration.swift */,
+				8195F69823D5BFCD001D5AA1 /* NetworkError.swift */,
+				8195F69A23D5BFF3001D5AA1 /* NetworkRequest.swift */,
+				8195F69C23D5C01E001D5AA1 /* RequestManager.swift */,
+				8195F6A323D5C13B001D5AA1 /* DefaultRequestManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8195F69E23D5C02C001D5AA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8195F69F23D5C050001D5AA1 /* Repository.swift */,
+				8195F6A123D5C076001D5AA1 /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8195F6A923D5C904001D5AA1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8195F6AC23D5C9CC001D5AA1 /* ListRequest.swift */,
+				8195F6AE23D5C9D3001D5AA1 /* ListResponse.swift */,
+				8195F6B023D5C9DC001D5AA1 /* ListGateway.swift */,
+				8195F6AA23D5C9AE001D5AA1 /* DefaultListGateway.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8195F6B223D5CC9D001D5AA1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8195F6B323D5CCBB001D5AA1 /* Welcome */,
+				8195F6B423D5CCCD001D5AA1 /* Repo List */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8195F6B323D5CCBB001D5AA1 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				8175AF3F23D59527001D3950 /* CustomButton.swift */,
+				8195F69323D5B039001D5AA1 /* WelcomeView.swift */,
+				8175AF3B23D5926D001D3950 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		8195F6B423D5CCCD001D5AA1 /* Repo List */ = {
+			isa = PBXGroup;
+			children = (
+				8195F6A923D5C904001D5AA1 /* Services */,
+				8195F69523D5B78B001D5AA1 /* RepoListViewController.swift */,
+			);
+			path = "Repo List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,12 +227,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8195F6AB23D5C9AE001D5AA1 /* DefaultListGateway.swift in Sources */,
+				8195F6AD23D5C9CC001D5AA1 /* ListRequest.swift in Sources */,
 				8175AF3C23D5926D001D3950 /* WelcomeViewController.swift in Sources */,
+				8195F6A223D5C076001D5AA1 /* Owner.swift in Sources */,
+				8195F69923D5BFCD001D5AA1 /* NetworkError.swift in Sources */,
 				8195F69423D5B039001D5AA1 /* WelcomeView.swift in Sources */,
 				8175AF3E23D594CB001D3950 /* Colors.swift in Sources */,
 				8175AF2823D591F6001D3950 /* AppDelegate.swift in Sources */,
+				8195F6A023D5C050001D5AA1 /* Repository.swift in Sources */,
+				8195F69D23D5C01E001D5AA1 /* RequestManager.swift in Sources */,
+				8195F6AF23D5C9D3001D5AA1 /* ListResponse.swift in Sources */,
+				8195F6A423D5C13B001D5AA1 /* DefaultRequestManager.swift in Sources */,
+				8195F6B123D5C9DC001D5AA1 /* ListGateway.swift in Sources */,
 				8175AF2A23D591F6001D3950 /* SceneDelegate.swift in Sources */,
 				8195F69623D5B78B001D5AA1 /* RepoListViewController.swift in Sources */,
+				8195F6A823D5C558001D5AA1 /* NetworkConfiguration.swift in Sources */,
+				8195F69B23D5BFF3001D5AA1 /* NetworkRequest.swift in Sources */,
 				8175AF4023D59527001D3950 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
