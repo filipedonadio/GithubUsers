@@ -23,6 +23,9 @@ class DetailsView: UIView {
         table.estimatedRowHeight = 100
         table.rowHeight = UITableView.automaticDimension
         table.translatesAutoresizingMaskIntoConstraints = false
+        table.allowsSelection = false
+        table.separatorStyle = .none
+        table.tableFooterView = UIView()
         return table
     }()
 

@@ -10,4 +10,5 @@ import Foundation
 
 enum DetailsViewModelItemType {
     case about
+    case ownerCard
 }

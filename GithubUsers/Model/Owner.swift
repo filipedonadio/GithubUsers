@@ -12,4 +12,11 @@ struct Owner: Decodable {
 
     let login: String
     let url: String
+    let avatarUrl: String
+
+    enum CodingKeys: String, CodingKey {
+        case login
+        case url
+        case avatarUrl = "avatar_url"
+    }
 }

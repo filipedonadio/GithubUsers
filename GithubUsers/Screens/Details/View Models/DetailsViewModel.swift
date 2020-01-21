@@ -25,13 +25,52 @@ class DetailsViewModel {
         self.detailsGateway = detailsGateway
     }
 
-    private func formatItems(lastEvent: Event) {
+    private func downloadImage(imageUrl: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        if let url = URL(string: imageUrl) {
+            let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    completion(.failure(NetworkError.network))
+                }
+
+                if let imageData = data {
+                    completion(.success(imageData))
+                }
+            }
+
+            dataTask.resume()
+        }
+    }
+
+    private func prepareData(lastEvent: Event) {
+        if let selectedRepo = selectedRepo {
+
+            // Download avatar image
+            downloadImage(imageUrl: selectedRepo.owner.avatarUrl) { [weak self] response in
+                switch response {
+                case .failure(let error):
+                    print("Error downloading the image from URL: \(selectedRepo.owner.avatarUrl) | Error: \(error.reason)")
+                    self?.formatItems(lastEvent: lastEvent, avatarData: nil)
+
+                case .success(let imageData):
+                    self?.formatItems(lastEvent: lastEvent, avatarData: imageData)
+                }
+            }
+        }
+
+    }
+
+    private func formatItems(lastEvent: Event, avatarData: Data?) {
         if let selectedRepo = selectedRepo {
             let aboutItem = AboutCellViewModel(title: selectedRepo.name, subTitle: selectedRepo.url)
             items.append(aboutItem)
+
+            let ownerItem = OwnerCellViewModel(avatar: avatarData, caption: "OWNER", title: selectedRepo.owner.login, subTitle: selectedRepo.owner.url)
+            items.append(ownerItem)
         }
 
-        delegate?.onFetchEventsCompleted()
+        DispatchQueue.main.async { [weak self] in
+            self?.delegate?.onFetchEventsCompleted()
+        }
     }
 
     func fetchEvents(username: String, repoName: String) {
@@ -45,9 +84,7 @@ class DetailsViewModel {
                 }
 
             case .success(let events):
-                DispatchQueue.main.async { [weak self] in
-                    self?.formatItems(lastEvent: events[0])
-                }
+                self?.prepareData(lastEvent: events[0])
             }
         }
     }

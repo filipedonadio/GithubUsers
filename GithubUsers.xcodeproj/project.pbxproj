@@ -19,6 +19,8 @@
 		8150AEE523D7032B00AF6495 /* AboutCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AEE423D7032B00AF6495 /* AboutCellViewModel.swift */; };
 		8150AEE823D7037C00AF6495 /* DetailsViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AEE723D7037C00AF6495 /* DetailsViewModelItem.swift */; };
 		8150AEEA23D7059500AF6495 /* DetailsViewModelItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AEE923D7059500AF6495 /* DetailsViewModelItemType.swift */; };
+		8158743723D75554000749C5 /* OwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158743623D75554000749C5 /* OwnerCell.swift */; };
+		8158743923D7561A000749C5 /* OwnerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158743823D7561A000749C5 /* OwnerCellViewModel.swift */; };
 		8175AF2823D591F6001D3950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175AF2723D591F6001D3950 /* AppDelegate.swift */; };
 		8175AF2A23D591F6001D3950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175AF2923D591F6001D3950 /* SceneDelegate.swift */; };
 		8175AF3123D591F7001D3950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8175AF3023D591F7001D3950 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		8150AEE423D7032B00AF6495 /* AboutCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellViewModel.swift; sourceTree = "<group>"; };
 		8150AEE723D7037C00AF6495 /* DetailsViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelItem.swift; sourceTree = "<group>"; };
 		8150AEE923D7059500AF6495 /* DetailsViewModelItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelItemType.swift; sourceTree = "<group>"; };
+		8158743623D75554000749C5 /* OwnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCell.swift; sourceTree = "<group>"; };
+		8158743823D7561A000749C5 /* OwnerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCellViewModel.swift; sourceTree = "<group>"; };
 		8175AF2423D591F6001D3950 /* GithubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8175AF2723D591F6001D3950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8175AF2923D591F6001D3950 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				8150AED023D6D8F500AF6495 /* AboutCell.swift */,
+				8158743623D75554000749C5 /* OwnerCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				8150AED423D6E3BC00AF6495 /* DetailsViewModel.swift */,
 				8150AEE723D7037C00AF6495 /* DetailsViewModelItem.swift */,
 				8150AEE423D7032B00AF6495 /* AboutCellViewModel.swift */,
+				8158743823D7561A000749C5 /* OwnerCellViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			files = (
 				8195F6AB23D5C9AE001D5AA1 /* DefaultListGateway.swift in Sources */,
 				8150AEE023D6E72200AF6495 /* Event.swift in Sources */,
+				8158743723D75554000749C5 /* OwnerCell.swift in Sources */,
 				8195F6AD23D5C9CC001D5AA1 /* ListRequest.swift in Sources */,
 				8175AF3C23D5926D001D3950 /* WelcomeViewController.swift in Sources */,
 				8150AEE523D7032B00AF6495 /* AboutCellViewModel.swift in Sources */,
@@ -344,6 +351,7 @@
 				8195F6A023D5C050001D5AA1 /* Repository.swift in Sources */,
 				8195F69D23D5C01E001D5AA1 /* RequestManager.swift in Sources */,
 				81F4181423D6046B00109948 /* DetailsViewController.swift in Sources */,
+				8158743923D7561A000749C5 /* OwnerCellViewModel.swift in Sources */,
 				8150AEDE23D6E60100AF6495 /* DefaultDetailsGateway.swift in Sources */,
 				8195F6AF23D5C9D3001D5AA1 /* ListResponse.swift in Sources */,
 				8195F6A423D5C13B001D5AA1 /* DefaultRequestManager.swift in Sources */,
