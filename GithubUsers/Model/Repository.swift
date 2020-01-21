@@ -11,5 +11,6 @@ import Foundation
 struct Repository: Decodable {
 
     let name: String
+    let url: String
     let owner: Owner
 }

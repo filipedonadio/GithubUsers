@@ -79,6 +79,14 @@ class RepoListViewController: UITableViewController, AlertDisplayer {
             viewModel.fetchRepos(for: username, page: page)
         }
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRepo = viewModel?.repositories[indexPath.row]
+        let detailsVC = DetailsViewController()
+        detailsVC.viewModel = DetailsViewModel(detailsGateway: DefaultDetailsGateway())
+        detailsVC.viewModel?.selectedRepo = selectedRepo
+        navigationController?.present(detailsVC, animated: true)
+    }
 }
 
 extension RepoListViewController: RepoListViewModelDelegate {
