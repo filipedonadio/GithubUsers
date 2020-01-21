@@ -41,7 +41,7 @@ class DetailsViewModel {
         }
     }
 
-    private func prepareData(lastEvent: Event) {
+    private func prepareData(lastEvent: Event?) {
         if let selectedRepo = selectedRepo {
 
             // Download avatar image
@@ -59,13 +59,31 @@ class DetailsViewModel {
 
     }
 
-    private func formatItems(lastEvent: Event, avatarData: Data?) {
+    private func formatItems(lastEvent: Event?, avatarData: Data?) {
         if let selectedRepo = selectedRepo {
             let aboutItem = AboutCellViewModel(title: selectedRepo.name, subTitle: selectedRepo.url)
             items.append(aboutItem)
 
-            let ownerItem = OwnerCellViewModel(avatar: avatarData, caption: "OWNER", title: selectedRepo.owner.login, subTitle: selectedRepo.owner.url)
+            let ownerItem = OwnerCellViewModel(
+                avatar: avatarData,
+                caption: "OWNER",
+                title: selectedRepo.owner.login,
+                subTitle: selectedRepo.owner.url
+            )
+
             items.append(ownerItem)
+        }
+
+        if let lastEvent = lastEvent {
+            let eventItem = EventCellViewModel(
+                caption: "LAST EVENT",
+                title: lastEvent.type,
+                authoredBy: "AUTHORED BY",
+                authorName: lastEvent.actor.displayLogin,
+                authorUrl: lastEvent.actor.url
+            )
+
+            items.append(eventItem)
         }
 
         DispatchQueue.main.async { [weak self] in
@@ -84,7 +102,7 @@ class DetailsViewModel {
                 }
 
             case .success(let events):
-                self?.prepareData(lastEvent: events[0])
+                self?.prepareData(lastEvent: events.first)
             }
         }
     }

@@ -49,6 +49,7 @@ class DetailsViewController: UIViewController, AlertDisplayer {
         detailsView.tableView.dataSource = self
         detailsView.tableView.register(AboutCell.self, forCellReuseIdentifier: AboutCell.identifier)
         detailsView.tableView.register(OwnerCell.self, forCellReuseIdentifier: OwnerCell.identifier)
+        detailsView.tableView.register(EventCell.self, forCellReuseIdentifier: EventCell.identifier)
     }
 }
 
@@ -87,6 +88,12 @@ extension DetailsViewController: UITableViewDataSource {
 
             case .ownerCard:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: OwnerCell.identifier, for: indexPath) as? OwnerCell {
+                    cell.item = item
+                    return cell
+                }
+
+            case .eventCard:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: EventCell.identifier, for: indexPath) as? EventCell {
                     cell.item = item
                     return cell
                 }
